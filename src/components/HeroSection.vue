@@ -11,8 +11,10 @@ const scrollToServices = () => {
 </script>
 
 <template>
-  <section id="inicio" class="relative h-screen min-h-[640px] flex flex-col items-center overflow-hidden">
-
+  <section
+    id="inicio"
+    class="relative h-screen min-h-[640px] flex flex-col items-center overflow-hidden"
+  >
     <!-- Imagen de fondo placeholder -->
     <img
       src="https://picsum.photos/seed/aura-hero/1920/1080"
@@ -24,29 +26,38 @@ const scrollToServices = () => {
     <div class="absolute inset-0 bg-gradient-to-b from-dark/75 via-dark/55 to-dark/85" />
 
     <!-- Contenido central -->
-    <div class="relative z-10 text-center px-5 max-w-4xl mx-auto w-full flex-1 flex flex-col items-center justify-center pt-[20px] pb-[100px] sm:pt-0 sm:pb-0">
-
+    <div
+      class="relative z-10 text-center px-5 max-w-4xl mx-auto w-full flex-1 flex flex-col items-center justify-center pt-[20px] pb-[100px] sm:pt-0 sm:pb-0"
+    >
       <!-- Badge superior -->
       <div class="hero-animate hero-animate-1 inline-flex items-center gap-3 mb-6">
         <span class="h-px w-8 bg-gold" />
-        <p class="font-lato text-[10px] tracking-[0.4em] uppercase text-gold">Salón de Belleza & Spa</p>
+        <p class="font-lato text-[10px] tracking-[0.4em] uppercase text-gold">
+          Salón de Belleza & Spa
+        </p>
         <span class="h-px w-8 bg-gold" />
       </div>
 
       <!-- Título principal -->
-      <h1 class="hero-animate hero-animate-2 font-cormorant font-light text-white leading-none mb-5"
-          style="font-size: clamp(4rem, 12vw, 9rem)">
+      <h1
+        class="hero-animate hero-animate-2 font-cormorant font-light text-white leading-none mb-5"
+        style="font-size: clamp(4rem, 12vw, 9rem)"
+      >
         Aura <span class="italic text-primary">Beauty</span>
       </h1>
 
       <!-- Subtítulo -->
-      <p class="hero-animate hero-animate-3 font-cormorant text-white/65 font-light italic mb-10"
-         style="font-size: clamp(1.1rem, 2.5vw, 1.5rem)">
+      <p
+        class="hero-animate hero-animate-3 font-cormorant text-white/65 font-light italic mb-10"
+        style="font-size: clamp(1.1rem, 2.5vw, 1.5rem)"
+      >
         Tu espacio de lujo, cuidado y bienestar
       </p>
 
       <!-- Botones CTA -->
-      <div class="hero-animate hero-animate-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div
+        class="hero-animate hero-animate-4 flex flex-col sm:flex-row items-center justify-center gap-4"
+      >
         <a
           :href="whatsappUrl"
           target="_blank"
@@ -61,23 +72,6 @@ const scrollToServices = () => {
         >
           Ver Servicios
         </button>
-      </div>
-    </div>
-
-    <!-- Estadísticas en franja inferior -->
-    <div class="absolute bottom-0 left-0 right-0 z-10">
-      <div class="hero-animate hero-animate-5 bg-dark/60 backdrop-blur-sm border-t border-white/10">
-        <div class="max-w-3xl mx-auto px-5 py-5 flex flex-col sm:flex-row items-center justify-center">
-          <div
-            v-for="(stat, index) in heroStats"
-            :key="stat.label"
-            class="flex flex-col items-center px-10 py-2 sm:py-0 w-full sm:w-auto"
-            :class="index < heroStats.length - 1 ? 'sm:border-r border-white/15' : ''"
-          >
-            <span class="font-cormorant text-gold text-3xl font-light">{{ stat.value }}</span>
-            <span class="font-lato text-white/45 text-[10px] tracking-[0.22em] uppercase mt-0.5">{{ stat.label }}</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
